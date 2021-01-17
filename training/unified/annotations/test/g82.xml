@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>g82.jpg</filename>
+	<path>/media/biscuit/HARDDRIVE/goose_dataset/unified/images/test/g82.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>960</width>
+		<height>944</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>goose</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>583</xmin>
+			<ymin>225</ymin>
+			<xmax>837</xmax>
+			<ymax>370</ymax>
+		</bndbox>
+	</object>
+</annotation>
