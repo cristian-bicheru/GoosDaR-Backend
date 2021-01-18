@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>gn123.jpg</filename>
+	<path>/media/biscuit/HARDDRIVE/goose_dataset/unified/images/train/gn123.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>490</width>
+		<height>612</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>goose</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>219</xmin>
+			<ymin>379</ymin>
+			<xmax>313</xmax>
+			<ymax>512</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -21,20 +21,20 @@ register_coco_instances("unified_test", {}, "unified/test.json", "unified/images
 print("Done!")
 
 cfg = get_cfg()
-cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml"))
+cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_X_101_32x8d_FPN_3x.yaml"))
 cfg.DATASETS.TRAIN = ("unified_train",)
 cfg.DATASETS.TEST = ("unified_test",)
 cfg.TEST.EVAL_PERIOD = 1000
 cfg.DATALOADER.NUM_WORKERS = 2
-#cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Detection/faster_rcnn_R_101_FPN_3x.yaml")
-cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_0029999.pth")
+cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Detection/faster_rcnn_X_101_32x8d_FPN_3x.yaml")
+#cfg.MODEL.WEIGHTS = os.path.join(cfg.OUTPUT_DIR, "model_0029999.pth")
 cfg.SOLVER.IMS_PER_BATCH = 6
-cfg.SOLVER.BASE_LR = 1e-6
-cfg.SOLVER.MAX_ITER = 35000
-cfg.SOLVER.STEPS = (35000,)
+cfg.SOLVER.BASE_LR = 1e-5
+cfg.SOLVER.MAX_ITER = 80000
+cfg.SOLVER.STEPS = (40000,60000,70000)
 cfg.SOLVER.NESTEROV = True
 cfg.SOLVER.CHECKPOINT_PERIOD = 1000
-cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 2048
+cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE = 512
 cfg.MODEL.ROI_HEADS.NUM_CLASSES = 1
 
 class Trainer(DefaultTrainer):
